@@ -6,3 +6,5 @@
 - Utilized PIL (Python Imaging Library for color detection, edge detection, and thresholding) 
 - Makes jigsaw puzzles from pictures uploaded by the user
 - Solves unsolved jigsaw puzzles for the user
+
+Demo Video: https://www.youtube.com/watch?v=r11zQVgLSsA
