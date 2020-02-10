@@ -1,0 +1,39 @@
+Krishna Dave, kdave
+Recitation Section FF
+Mentor: Chaya Wurman
+Time Sheet
+
+
+Week 1 and Earlier (Nov 14-19): 
+
+4 hours - Brainstorming Possible TP ideas, Term Project Gallery Exploration 
+3 hours - Initial Idea Research 
+15-20 hours: Trying to figure out OpenCV; decided not to use it 
+
+
+Week 2 (Nov 20-26): 
+
+3 hours - Exploring PIL and its uses
+6 hours - Prep for TP 1 (Assignments and Module Demonstration)
+Time spent over the Thanksgiving break: 
+15 hours
+
+
+Week 3 (Nov 27-Dec 3): 
+
+8 hours-Monday
+2 hours-Tuesday
+4 hours-Wednesday
+10 hours-Saturday
+8 hours- Sunday
+
+Week 4 (Dec 4-6):
+
+6 hours - Monday
+7 hours - Tuesday
+2 hours - Wednesday
+
+Due: Thu 8-Dec at 4:30pm
+
+Total hours worked so far: 98 hours
+Total hours this week: 15 hours  

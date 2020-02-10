@@ -1,0 +1,66 @@
+Krishna Dave, kdave
+15112 TP 3
+Competitive Analysis
+
+
+In this section, I will comment on and conduct competitive analysis for 
+existing games and products I found online that are similar to Puzzle Mania. 
+
+
+Product 1: Jigsaw Puzzle Solver [Open CV and Eclipse]
+ https://www.youtube.com/watch?v=9zWPQwS3nak
+
+
+This video is about a jigsaw puzzle solving program. 
+The idea of this program is quite similar to mine because 
+the programmer uses color detection, color matching and
+pieces’ outline to solve a jigsaw puzzle. A feature that 
+I really found compelling in this program is that the programmer
+uses the complete (target) picture as a reference for color detection. 
+For instance, the programmer matches the pixels from the piece to the
+final picture and uses that to find the relative position of a jigsaw piece. 
+The program is written in Java and implements the modules Open CV and Eclipse. 
+I tried using Open CV for a few days, but could not seem to understand it, 
+so I am implementing PIL for color detection, cropping and outline detection.
+
+
+Product 2: Automatic Jigsaw Puzzle Solving
+
+
+https://www.cs.bgu.ac.il/~icvl/projects/project-jigsaw-files/GeneratePuzzle.m
+https://www.cs.bgu.ac.il/~icvl/icvl_projects/automatic-jigsaw-puzzle-solving/
+
+
+This source seems like a professional institution or an organization with more 
+than one person working on solving this program. The project is labelled as 
+Computational Puzzle Solving. The algorithm they use is extremely complex and robust. 
+The group of programmer put the following statement on their website: 
+“In 2011 we were proud to be the first group to have devised a computational solution 
+which is both fully automatic, requires no manually provided hints, operates on 
+puzzles having thousands of pieces, and does not with near perfect performance.” 
+As you can see, their goal is quite grand compared to my goal for the term project. 
+I wish my program to do two things, 
+1) cut a picture into square pieces and 
+2) be able to detect color and outlines of shuffled jigsaw pieces and number 
+them in sequential order. I am hope that my program can solve a small basic puzzle with distinct colors.
+A feature that I really liked about their algorithm is that they solve based 
+on similar areas in the puzzle. For instance, the program solves all the green trees first, 
+then solves the stones, the water, the sky and finally, places the miscellaneous pieces of details. 
+
+
+Product 3: Slider Puzzle in Blender using Python
+https://www.youtube.com/watch?v=jipaKhQWDeg
+ 
+In this product, the programmer uses a graphical module called 
+Blender to create a slider puzzle. I am still debating whether 
+I should do a slider puzzle solver or a jigsaw puzzle solver. 
+The slider puzzle seems quite appropriate to solve using the topics 
+we learned in class including: backtracking and 2D lists.  
+Making a slider puzzle also seems a lot more feasible to me because 
+all the pieces of the shuffled puzzle stay on the designated board 
+without any overlap. The feature that I really like about this program 
+is its organization. For instance, the code for his divided into 
+four parts: Creating the grid, texturing, finding moveable pieces and animation. 
+The programmer has very good style of programming! 
+
+

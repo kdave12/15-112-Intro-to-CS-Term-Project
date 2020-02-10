@@ -1,0 +1,118 @@
+Krishna Dave, kdave
+Section FF
+Mentor: Chaya Wurman
+Project Proposal
+
+Include a complete and thorough project proposal, clearly defining the problem you 
+intend to solve and a fairly detailed description of how you intend to solve it.
+In particular, your proposal must list all modules/technologies you plan to use outside of Tkinter. 
+
+
+Puzzle Mania
+Puzzle Mania is a puzzle constructor and solver game. There are two main components of this game: 
+
+
+The Solver:  The first component of the game is called the solver, which solves an unsolved puzzle.
+The program takes in a picture of unsolved shuffled puzzle pieces on a flat surface as well as a 
+picture of the final puzzle image. It then returns the inputted image of the shuffled puzzle pieces
+with numbers on the pieces in consecutive order for a solved puzzle from left to right and top to bottom.
+The program will use the module Python Imaging Library (PIL) to detect outlines and colors of puzzle
+pieces using thresholding, color/edge matching and checking the position of each piece on the final image
+to determine the order of the numbers on the board.
+
+
+The Constructor:  The second part of this game is the constructor, which includes two main features: Puzzle and Grid. 
+Puzzle: The puzzle mode creates a puzzle from an image, shuffles the pieces, 
+and asks the user to solve the puzzle. The user can pick from the existing picture library 
+or upload their own picture. The program will crop the image differently for each selected 
+difficulty level. Smaller and different sized pieces will be cropped for difficult level,
+and large and same sized pieces for the easy level. In other words, low difficulty equates
+to a small number of big pieces, whereas high difficult corresponds to a high number of small pieces. 
+The puzzle pieces can be dragged and dropped using the mouse.
+
+Grid: The grid game is a different type of puzzle game. The program creates a grid puzzle from an image, 
+shuffles the pieces, and asks the user to solve it by clicking on two pieces. After two pieces are selected, 
+the pieces are switched. The difficulty level varies in terms of the sizes of the pieces and the extent 
+to which the puzzle pieces can be moved. For the highest difficulty level, the puzzle pieces can be 
+switched only if they are adjacent. 
+
+
+High Level Algorithms Description  
+
+The Constructor: 
+     1.    Cropping and cutting puzzle pieces from the final image: 
+A nested for-loop will be implemented to loop over all pixels of the final image with a fixed step size. 
+A 2D list will be created with elements consisting of cropped images aka the puzzle pieces. 
+The steps will vary based on the chosen difficulty level.
+Ex.
+board = []
+for i in range(0, puzzleWidth-step, step):
+	rows = []
+	for j in range(0, puzzleheight-step, step):
+		piece = im.crop (x1, y1, x2, y2, image = puzzle)
+		cols.append(piece)
+	rows.append(cols)
+	return board
+
+
+     2.    Dragging and Dropping the puzzle pieces: 
+
+If the mouse is pressed in the bounds of the puzzle piece: until the mouse is released, 
+the puzzle piece will move with the mousepointer.
+Reference - mouseEventsDemo.py from class notes
+Mouse Events: mousePressed, mouseMoved, mouseReleased, with left or right button, and with ctrl and shift
+
+
+The Solver: 
+    3. 	  Color Detection, Edge Detection, Piece Matching: 
+Firstly, PIL will be used to threshold the inputted image. As a result, the white/light colored background of the surface will be ignored and only the puzzle pieces will show in black. Now, the position of each piece will be recorded, for instance the corners of the black square (x1, y1, x2, y2). 
+Next, a for loop will run over the pixels in each piece and check where in the final image those cluster of pixels lie. 
+Pixels around the edge of each piece will be compared to the pixels at the edge of the other remaining pieces.
+A piece will be finally matched to a piece based on color matching at the edge and the relative position in the final image. 
+
+Color Detection Through The Seive Method:
+
+In this method, first all the pieces in shuffled pieces are matched with the pieces in final pieces list.
+The colors are compared and the difference in color is calculated. 
+So, for the first seive, all the pieces that closely match (difference<1) are matched 
+and progressively the differences are increased until all pieces are matched. 
+
+    4.    What a puzzle piece means in python?
+	  The puzzle piece is in python is essentially a cropped image from the final 
+          puzzle image or the inputted unsolved puzzle image.     
+
+    5.    Other features and algorithms in the term project include:
+
+Fully Functional Constructor
+Selection of an image 
+Selection of difficulty
+Cropping of the pieces from the selected image 
+Windows Explorer in Tkinter to upload photos
+Functional UI with modes 
+Bells and Whistles: Intro Animation, Background Pictures, Hint function, Play Again, Timer,
+Help Screen with instructions, Back buttons, Drag and Drop, Error Screen 
+
+Puzzle Mode: 
+
+Display final image for reference
+Dashboard
+Randomly sized and shuffled pieces
+Drag and drop pieces
+Hint
+Once all the pieces are in the right position on the dashboard, a display of message and play again button
+Timer
+
+Grid Mode:
+
+Timer
+Dashboard
+"Number of Hints Left" Message
+Shuffled pieces in the dashboard that can be switched if two pieces are selected
+Error Screen if the user tries to switch the non-adjacent pieces in the difficult level of the grid puzzle
+
+
+
+
+
+
+
