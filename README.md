@@ -2,7 +2,7 @@
 
 ## Puzzle Mania - A game programmed in Python
 ### A jigsaw puzzle game simulation:
-- Programmed in Python
+- Programmed in Python (located in 
 - Utilized PIL (Python Imaging Library for color detection, edge detection, and thresholding) 
 - Makes jigsaw puzzles from pictures uploaded by the user
 - Solves unsolved jigsaw puzzles for the user
